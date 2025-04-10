@@ -3,7 +3,7 @@ export type CandidateStatus = 'New' | 'In Review' | 'Shortlisted' | 'Rejected' |
 export interface JobRequirement {
   id: string;
   text: string;
-  type: 'must-have' | 'nice-to-have';
+  type: 'must-have' | 'nice-to-have' | 'education';
 }
 
 export interface JobDescription {
@@ -12,20 +12,40 @@ export interface JobDescription {
   department: string;
   location: string;
   type: string;
+  jobId: string;
+  postedDate: string;
   salary: {
     min: number;
     max: number;
     currency: string;
+    includesBonus?: boolean;
+    includesEquity?: boolean;
   };
   summary: string;
+  teamDescription: string;
   impact: string[];
   requirements: JobRequirement[];
   responsibilities: string[];
-  benefits: string[];
   teamSize: number;
-  videoUrl: string;
+  videoUrl?: string;
   status: 'Active' | 'Inactive' | 'Draft';
   candidates?: Candidate[];
+  qualifications: {
+    basic: string[];
+    preferred: string[];
+    education: string[];
+  };
+  additionalInfo: {
+    workHours: string;
+    travelRequirements: string;
+    physicalRequirements: string;
+    eeoStatement: string;
+  };
+  culture: {
+    values: string[];
+    teamDescription: string;
+  };
+  benefits: string[];
 }
 
 export interface Candidate {

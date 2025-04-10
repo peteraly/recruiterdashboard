@@ -42,54 +42,84 @@ const mockJobDescription: JobDescription = {
   department: 'Engineering',
   location: 'San Francisco, CA',
   type: 'Full-time',
+  jobId: 'ENG-2024-001',
+  postedDate: new Date().toISOString(),
   salary: {
-    min: 120000,
-    max: 180000,
-    currency: 'USD'
+    min: 150000,
+    max: 220000,
+    currency: 'USD',
+    includesBonus: true,
+    includesEquity: true
   },
-  summary: 'We are looking for a Senior Software Engineer to join our team and help build the next generation of our platform.',
+  summary: 'We are seeking an experienced Senior Software Engineer to join our dynamic team...',
+  teamDescription: 'Join our innovative engineering team focused on building scalable solutions...',
   impact: [
-    'Lead the development of core platform features',
-    'Mentor junior engineers and promote best practices',
-    'Drive technical architecture decisions'
+    'Lead the development of our core platform features',
+    'Mentor junior developers and contribute to team growth',
+    'Drive technical decisions and architecture improvements'
   ],
   requirements: [
     {
       id: '1',
-      text: '5+ years experience',
+      text: '7+ years of software development experience',
       type: 'must-have'
     },
     {
       id: '2',
-      text: 'React',
+      text: 'Experience with React and TypeScript',
       type: 'must-have'
     },
     {
       id: '3',
-      text: 'TypeScript',
-      type: 'must-have'
+      text: 'Experience with cloud platforms (AWS/GCP)',
+      type: 'nice-to-have'
     },
     {
       id: '4',
-      text: 'AWS certification',
-      type: 'nice-to-have'
-    },
-    {
-      id: '5',
-      text: 'Open source contributions',
-      type: 'nice-to-have'
+      text: "Bachelor's degree in Computer Science or related field",
+      type: 'education'
     }
   ],
-  responsibilities: ['Lead development team', 'Code review', 'Architecture design'],
+  responsibilities: [
+    'Design and implement scalable software solutions',
+    'Collaborate with cross-functional teams',
+    'Participate in code reviews and technical discussions'
+  ],
+  teamSize: 8,
+  videoUrl: 'https://example.com/job-video',
+  status: 'Active',
+  qualifications: {
+    basic: [
+      '7+ years of software development experience',
+      'Strong proficiency in JavaScript/TypeScript'
+    ],
+    preferred: [
+      'Experience with cloud platforms',
+      'Knowledge of CI/CD practices'
+    ],
+    education: [
+      "Bachelor's degree in Computer Science or related field"
+    ]
+  },
+  additionalInfo: {
+    workHours: 'Monday to Friday, 9:00 AM to 5:00 PM PST',
+    travelRequirements: 'Minimal travel required',
+    physicalRequirements: 'Office environment, primarily computer work',
+    eeoStatement: 'We are an equal opportunity employer...'
+  },
+  culture: {
+    values: [
+      'Innovation',
+      'Collaboration',
+      'Excellence'
+    ],
+    teamDescription: 'Our team values open communication and continuous learning'
+  },
   benefits: [
     'Competitive salary',
     'Health insurance',
-    'Flexible work hours',
-    'Remote work options'
-  ],
-  teamSize: 8,
-  videoUrl: 'https://example.com/team-video',
-  status: 'Active'
+    'Flexible work hours'
+  ]
 };
 
 const mockCandidate: Candidate = {

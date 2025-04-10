@@ -32,15 +32,17 @@ const mockJobDescription: JobDescription = {
   location: 'San Francisco, CA',
   type: 'Full-time',
   salary: {
-    min: 120000,
-    max: 180000,
-    currency: 'USD'
+    min: 150000,
+    max: 220000,
+    currency: 'USD',
+    includesBonus: true,
+    includesEquity: true
   },
-  summary: 'We are looking for a Senior Software Engineer to join our team and help build the next generation of our platform.',
+  summary: 'We are seeking an experienced Senior Software Engineer...',
   impact: [
-    'Lead the development of new features',
+    'Lead development of core features',
     'Mentor junior developers',
-    'Improve code quality and performance'
+    'Drive technical decisions'
   ],
   requirements: [
     {
@@ -50,40 +52,53 @@ const mockJobDescription: JobDescription = {
     },
     {
       id: '2',
-      text: 'Strong knowledge of React and TypeScript',
-      type: 'must-have'
+      text: 'Bachelor\'s degree in Computer Science or related field',
+      type: 'education'
     },
     {
       id: '3',
-      text: 'Experience with cloud platforms (AWS/GCP)',
-      type: 'nice-to-have'
-    },
-    {
-      id: '4',
-      text: 'AWS certification',
-      type: 'nice-to-have'
-    },
-    {
-      id: '5',
-      text: 'Open source contributions',
+      text: 'Experience with cloud platforms',
       type: 'nice-to-have'
     }
   ],
   responsibilities: [
-    'Design and implement new features',
-    'Code review and mentoring',
-    'Performance optimization'
+    'Lead development of core features',
+    'Mentor junior developers',
+    'Drive technical decisions'
   ],
-  benefits: [
-    'Competitive salary',
-    'Health insurance',
-    '401(k) matching',
-    'Flexible work hours',
-    'Remote work options'
-  ],
-  teamSize: 8,
+  teamSize: 10,
   videoUrl: 'https://example.com/video',
-  status: 'Active'
+  jobId: 'SE-2024-001',
+  postedDate: new Date().toISOString(),
+  teamDescription: 'Join our innovative engineering team focused on building scalable solutions',
+  status: 'Active',
+  qualifications: {
+    basic: ['5+ years experience', 'Strong JavaScript skills'],
+    preferred: ['Cloud platform experience', 'Team leadership'],
+    education: ['Bachelor\'s degree in Computer Science']
+  },
+  additionalInfo: {
+    workHours: 'Monday to Friday, 9:00 AM to 5:00 PM PST',
+    travelRequirements: 'Occasional travel to client sites (10-15%)',
+    physicalRequirements: 'This position will be performed in an office setting. The position will require the incumbent to sit and stand at a desk, communicate in person and by telephone, frequently operate standard office equipment, such as telephones and computers.',
+    eeoStatement: 'Visa is an EEO Employer. Qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, sexual orientation, gender identity, disability or protected veteran status.'
+  },
+  benefits: [
+    'Medical, Dental, Vision',
+    '401(k)',
+    'FSA/HSA',
+    'Life Insurance',
+    'Paid Time Off',
+    'Wellness Program'
+  ],
+  culture: {
+    teamDescription: 'Our team values open communication and continuous learning',
+    values: [
+      'Innovation',
+      'Collaboration',
+      'Excellence'
+    ]
+  }
 };
 
 const mockCandidate: Candidate = {
